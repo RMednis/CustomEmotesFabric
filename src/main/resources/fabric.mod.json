@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "customemotes",
+  "version": "${version}",
+  "name": "CustomEmotes",
+  "description": "A recreation of AlgidSpace's FabricEmotes mod.",
+  "authors": [
+    "Mednis"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/CustomEmotes/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "mods.mednis.id.lv.customemotes.FabricEmotesMod"
+    ]
+  },
+  "mixins": [
+    "CustomEmotes.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
