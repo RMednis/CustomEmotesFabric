@@ -62,7 +62,6 @@ public class EmoteRegistry {
       // Samus
       registerEmote(new Emote("HeartScream", "samus/heartscream.png"));
       registerEmote(new Emote("ph1lPIG", "samus/ph1lpig.png"));
-      registerEmote(new Emote("Popza", "samus/popza.png"));
       registerEmote(new Emote("VeryConcern", "samus/veryconcern.png"));
 
       // Kizen
@@ -90,7 +89,7 @@ public class EmoteRegistry {
       registerEmote(new Emote("dogJAM", "animated/mednis/dogjam.png", 70));
       registerEmote(new Emote("blink", "animated/mednis/blink.png", 30));
       registerEmote(new Emote("catKISS", "animated/mednis/catkiss.png", 60));
-      registerEmote(new Emote("catKISS", "animated/mednis/hypee.png", 30));
+      registerEmote(new Emote("hypeE", "animated/mednis/hypee.png", 30));
       registerEmote(new Emote("monkaSHAKE", "animated/mednis/monkashake.png", 40));
 
       // Samus
@@ -100,7 +99,7 @@ public class EmoteRegistry {
       registerEmote(new Emote("PressF", "animated/samus/pressf.png", 30));
       registerEmote(new Emote("StickBug", "animated/samus/stickbug.png", 60));
       registerEmote(new Emote("ThisIsFine", "animated/samus/thisisfine.png", 10));
-      registerEmote(new Emote("blobble", "animated/samus/blobble.png", 20));
+      registerEmote(new Emote("Popza", "animated/samus/popza.png", 90));
 
 
 
@@ -126,6 +125,6 @@ public class EmoteRegistry {
   }
   
   public Collection<String> getEmoteSuggestions() {
-    return (Collection<String>)Lists.newArrayList(this.emoteMap.keys().asIterator()).stream().map(name -> ":" + name + ":").collect(Collectors.toList());
+    return Lists.newArrayList(this.emoteMap.keys().asIterator()).stream().map(name -> ":" + name + ":").collect(Collectors.toList());
   }
 }
