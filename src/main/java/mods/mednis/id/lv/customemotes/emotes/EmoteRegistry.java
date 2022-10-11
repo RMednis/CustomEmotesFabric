@@ -101,7 +101,8 @@ public class EmoteRegistry {
       registerEmote(new Emote("ThisIsFine", "animated/samus/thisisfine.png", 10));
       registerEmote(new Emote("Popza", "animated/samus/popza.png", 90));
 
-
+      // Raz
+      registerEmote(new Emote("GigaChad", "animated/general/gigachad.png", 35));
 
 
     } catch (Exception e) {
