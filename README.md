@@ -45,7 +45,7 @@ If you're using linux, here's an easy way to convert a `.gif` emote to the prope
 
     `sudo apt install imagemagick` - For combining the frames into a .png
 
-2. Dump all the frames from the `.gif` to separate files: `gm convert ../../animated.gif +adjoin %3d.png`
+2. Dump all the frames from the `.gif` to separate files: `gm convert animated.gif +adjoin %3d.png`
 3. Combine all the dumped frames into one vertical `.png`:  `convert -append *.png out.png`
 4. Rename the `out.png` file to whatever you want
 5. Move the renamed file to `\src\main\resources\assets\customemotes\emotes\animated`
