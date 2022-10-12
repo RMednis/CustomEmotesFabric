@@ -107,7 +107,9 @@ public class EmoteRegistry {
 
     } catch (Exception e) {
       this.LOGGER.error("init(): Failed to load emotes", e);
-    } 
+    }
+
+    this.LOGGER.info(String.format("Loaded %s emotes", emoteMap.size()));
   }
   
   public void registerEmote(Emote emote) throws Exception {
