@@ -4,7 +4,7 @@ A buildable source version of [AlgidSpace's](https://authors.curseforge.com/memb
 [Fabric Emotes](https://www.curseforge.com/minecraft/mc-mods/fabric-emotes).
 All credit goes to them :D
 
-This version is fully buildable from the source files and includes some minor bug fixes.
+This version is fully buildable from the source files and includes some minor bug fixes as well as support for Minecraft 1.19.2. 
 
 
 ## How to add your own custom emotes
