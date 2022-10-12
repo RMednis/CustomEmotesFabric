@@ -9,8 +9,6 @@ import net.minecraft.text.Style;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.font.TextRenderer;
-import net.minecraft.text.Style;
-import net.minecraft.text.Text;
 import mods.mednis.id.lv.customemotes.emotes.Emote;
 import mods.mednis.id.lv.customemotes.emotes.EmoteRegistry;
 import mods.mednis.id.lv.customemotes.text.TextReaderVisitor;

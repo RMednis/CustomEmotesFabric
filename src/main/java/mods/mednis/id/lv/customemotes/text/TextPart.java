@@ -1,12 +1,11 @@
 package mods.mednis.id.lv.customemotes.text;
 
 import net.minecraft.text.Style;
-import net.minecraft.text.Text;
 
 public class TextPart {
-  private Style style;
+  private final Style style;
   
-  private char chr;
+  private final char chr;
   
   public TextPart(Style style, char chr) {
     this.style = style;

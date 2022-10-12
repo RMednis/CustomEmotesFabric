@@ -3,9 +3,7 @@ package mods.mednis.id.lv.customemotes.mixin;
 import java.util.List;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.MinecraftClient.ChatRestriction;
 import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.CharacterVisitor;
 import net.minecraft.text.OrderedText;

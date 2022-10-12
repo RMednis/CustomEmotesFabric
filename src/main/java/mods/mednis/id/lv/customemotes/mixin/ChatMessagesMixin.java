@@ -1,6 +1,5 @@
 package mods.mednis.id.lv.customemotes.mixin;
 
-import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.minecraft.client.util.ChatMessages;

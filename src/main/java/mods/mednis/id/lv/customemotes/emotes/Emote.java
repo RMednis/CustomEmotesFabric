@@ -11,19 +11,19 @@ import net.minecraft.resource.Resource;
 public class Emote {
   private static int currEmoteId = 0;
   
-  private int id;
+  private final int id;
   
-  private String name;
+  private final String name;
   
-  private String filename;
+  private final String filename;
   
   private int width;
   
   private int height;
   
-  private int frameCount;
+  private final int frameCount;
   
-  private int frameTimeMs;
+  private final int frameTimeMs;
   
   public Emote(String name, String filename) throws IOException {
     this(name, filename, 0);

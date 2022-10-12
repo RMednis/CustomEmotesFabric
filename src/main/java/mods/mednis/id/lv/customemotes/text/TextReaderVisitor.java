@@ -6,7 +6,7 @@ import java.util.List;
 import net.minecraft.text.*;
 
 public class TextReaderVisitor implements CharacterVisitor {
-  private List<TextPart> textParts = new ArrayList<>();
+  private final List<TextPart> textParts = new ArrayList<>();
   
   public boolean accept(int val, Style style, int currCharInt) {
     this.textParts.add(new TextPart(style, (char)currCharInt));

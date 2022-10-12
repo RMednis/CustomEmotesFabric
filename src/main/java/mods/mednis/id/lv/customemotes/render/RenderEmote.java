@@ -3,11 +3,11 @@ package mods.mednis.id.lv.customemotes.render;
 import mods.mednis.id.lv.customemotes.emotes.Emote;
 
 public class RenderEmote {
-  private Emote emote;
+  private final Emote emote;
   
-  private float x;
+  private final float x;
   
-  private float y;
+  private final float y;
   
   public RenderEmote(Emote emote, float x, float y) {
     this.emote = emote;
