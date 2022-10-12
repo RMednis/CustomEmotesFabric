@@ -2,11 +2,8 @@ package mods.mednis.id.lv.customemotes.text;
 
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.text.Text;
-import net.minecraft.text.Style;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.CharacterVisitor;
-import net.minecraft.text.OrderedText;
+
+import net.minecraft.text.*;
 
 public class TextReaderVisitor implements CharacterVisitor {
   private List<TextPart> textParts = new ArrayList<>();
@@ -22,8 +19,9 @@ public class TextReaderVisitor implements CharacterVisitor {
   }
   
   public void deleteBetween(int beginIndex, int endIndex) {
-    for (int i = endIndex - 1; i >= beginIndex; i--)
-      this.textParts.remove(i); 
+    if (endIndex > beginIndex) {
+      this.textParts.subList(beginIndex, endIndex).clear();
+    }
   }
   
   public void insertAt(int index, String text, Style style) {
@@ -32,10 +30,13 @@ public class TextReaderVisitor implements CharacterVisitor {
   }
   
   public OrderedText getOrderedText() {
-    LiteralText literalText = new LiteralText("");
+
+    MutableText text = Text.empty();
+
     for (TextPart textPart : this.textParts)
-      literalText.append((new LiteralText(Character.toString(textPart.getChr()))).setStyle(textPart.getStyle()));
-    return literalText.asOrderedText();
+      text.append(Text.literal(Character.toString(textPart.getChr())).setStyle(textPart.getStyle()));
+
+    return text.asOrderedText();
   }
   
   public String getString() {

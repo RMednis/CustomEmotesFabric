@@ -1,6 +1,7 @@
 package mods.mednis.id.lv.customemotes.emotes;
 
 import java.awt.image.BufferedImage;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import net.minecraft.util.Identifier;
@@ -33,9 +34,7 @@ public class Emote {
     this.name = name;
     this.filename = filename;
     this.frameTimeMs = frameTimeMs;
-    Resource resource = MinecraftClient.getInstance().getResourceManager().getResource(getTextureIdentifier());
-    try {
-      Resource resource2 = MinecraftClient.getInstance().getResourceManager().getResource(getTextureIdentifier());
+    Resource resource = MinecraftClient.getInstance().getResourceManager().getResourceOrThrow(getTextureIdentifier());
       try {
         BufferedImage bufferedImage = ImageIO.read(resource.getInputStream());
         if (bufferedImage == null)
@@ -47,31 +46,12 @@ public class Emote {
           this.height = this.width;
         } else {
           this.frameCount = 1;
-        } 
-        if (resource2 != null)
-          resource2.close(); 
-      } catch (Throwable throwable) {
-        if (resource2 != null)
-          try {
-            resource2.close();
-          } catch (Throwable throwable1) {
-            throwable.addSuppressed(throwable1);
-          }  
-        throw throwable;
-      } 
-      if (resource != null)
-        resource.close(); 
-    } catch (Throwable throwable) {
-      if (resource != null)
-        try {
-          resource.close();
-        } catch (Throwable throwable1) {
-          throwable.addSuppressed(throwable1);
-        }  
-      throw throwable;
-    } 
+        } // TODO: There may be issues with resource loading exceptions!
+      } catch (FileNotFoundException exception) {
+          throw new IOException(exception.getMessage());
+    }
   }
-  
+
   public int getId() {
     return this.id;
   }
@@ -79,8 +59,6 @@ public class Emote {
   public String getName() {
     return this.name;
   }
-
-  public String getSmallName(){ return this.name.toLowerCase();}
 
   public int getWidth() {
     return this.width;
