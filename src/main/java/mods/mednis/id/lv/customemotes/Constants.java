@@ -7,9 +7,3 @@ public class Constants {
   
   public static final String EMOTE_PLACEHOLDER = "  ";
 }
-
-
-/* Location:              C:\Users\Reinis\Downloads\fabricemotes-1.0.0.jar\\uk\co\algid\fabricemotes\Constants.class
- * Java compiler version: 17 (61.0)
- * JD-Core Version:       1.1.3
- */

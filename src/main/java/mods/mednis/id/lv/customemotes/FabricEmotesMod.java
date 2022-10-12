@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 import mods.mednis.id.lv.customemotes.emotes.EmoteRegistry;
 
 public class FabricEmotesMod implements ClientModInitializer {
-    private final Logger LOGGER = LogManager.getLogger("customemeotes.FabricEmotesMod");
+    private final Logger LOGGER = LogManager.getLogger("customemotes.FabricEmotesMod");
 
     public void onInitializeClient() {
         this.LOGGER.info("onInitializeClient(): Loading emotes...");
