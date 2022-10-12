@@ -15,7 +15,11 @@ import mods.mednis.id.lv.customemotes.emotes.EmoteRegistry;
 public abstract class ChatMessagesMixin {
   private static final Logger MOD_LOGGER = LogManager.getLogger("customemotes.mixin.ChatMessagesMixin");
   
-  @ModifyVariable(method = {"getRenderedChatMessage"}, at = @At("HEAD"), ordinal = 0)
+  @ModifyVariable(
+          method = {"getRenderedChatMessage"},
+          at = @At("HEAD"),
+          ordinal = 0)
+
   private static String getRenderedChatMessageParam(String message) {
     Pattern emotePattern = Pattern.compile("(:([A-Za-z0-9_-]*):)");
 

@@ -26,7 +26,10 @@ public abstract class ChatHudMixin {
   @Final
   private MinecraftClient client;
   
-  @Redirect(method = {"render"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/font/TextRenderer;drawWithShadow(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/text/OrderedText;FFI)I"))
+  @Redirect(method = {"render"}, at = @At(
+          value = "INVOKE",
+          target = "Lnet/minecraft/client/font/TextRenderer;drawWithShadow(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/text/OrderedText;FFI)I"
+  ))
   private int drawWithShadow(TextRenderer textRenderer, MatrixStack matrices, OrderedText text, float x, float y, int color) {
     TextReaderVisitor textReaderVisitor = new TextReaderVisitor();
     text.accept((CharacterVisitor) textReaderVisitor);
