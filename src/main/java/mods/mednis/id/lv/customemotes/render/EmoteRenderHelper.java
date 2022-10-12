@@ -42,7 +42,7 @@ public class EmoteRenderHelper {
   
   public static void drawEmote(MatrixStack matrices, RenderEmote renderEmote, float size, float alpha, float sizeMult, float maxWidthMult) {
     Emote emote = renderEmote.getEmote();
-    float scaleX = emote.getWidth() / emote.getHeight() * sizeMult;
+    float scaleX = (float) emote.getWidth() / (float) emote.getHeight() * sizeMult;
     float scaleY = sizeMult;
     if (scaleX > maxWidthMult) {
       scaleX = maxWidthMult;
